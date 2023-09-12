@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Assistant";
+  src: url("./Assistant-VariableFont_wght.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  font-family: "Assistant";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+aside {
+  font-style: italic;
+}
+
+.homepage {
+  display: flex;
+}
+
+img {
+  width: 50%;
+}
+
+#content {
+  /* background-color: red; */
+}
