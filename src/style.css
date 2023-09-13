@@ -6,27 +6,34 @@
 }
 
 * {
-  margin: 0;
   font-family: "Assistant";
 }
 
 body {
-  overflow: hidden;
-}
-
-aside {
-  font-style: italic;
-}
-
-.homepage {
-  display: flex;
-}
-
-img {
-  overflow: hidden;
-  /* object-fit: cover; */
+  /* margin: 0; */
+  background-image: url("./homepage.jpg");
+  background-size: cover;
 }
 
 #content {
-  /* background-color: red; */
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+main {
+  width: 50%;
+}
+
+aside {
+  grid-column: 2;
+  font-style: italic;
+}
+
+p {
+  grid-column: 2;
+  margin: 0;
 }
