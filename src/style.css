@@ -5,8 +5,10 @@
   font-style: normal;
 }
 
-* {
-  font-family: "Assistant";
+html {
+  font-family: monospace;
+
+  font-size: 20px;
 }
 
 body {
@@ -21,16 +23,29 @@ body {
 
 nav {
   display: flex;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-items: baseline;
   gap: 15px;
 }
 
+a:first-child {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2rem;
+}
+
 main {
+  background-color: black;
   width: 50%;
+  padding: 1rem;
 }
 
 aside {
   grid-column: 2;
+  margin-bottom: 1rem;
   font-style: italic;
+  font-size: 1.5rem;
 }
 
 p {

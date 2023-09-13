@@ -7,6 +7,7 @@ const displayTabs = (() => {
   content.appendChild(nav);
   const homepage = document.createElement("a");
   nav.appendChild(homepage).textContent = "The Hungry Fork";
+  //   homepage.style.fontSize = "2rem";
   const menu = document.createElement("a");
   nav.appendChild(menu).textContent = "Menu";
   const contact = document.createElement("a");
