@@ -12,7 +12,8 @@ html {
 
 body {
   /* margin: 0; */
-  background-image: url("./homepage.jpg");
+  background-image: url(./homepage.jpg);
+  background-color: black;
   background-size: cover;
 }
 

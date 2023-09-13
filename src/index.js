@@ -24,11 +24,17 @@ const displayTabs = (() => {
   // nav.appendChild(contact).textContent = "Contact";
 })();
 
+initialLoad();
+
 // Event listeners to navigation elements
 document.querySelectorAll("li").forEach(item => {
-  item.addEventListener("click", () => console.log("test"));
+  item.addEventListener("click", deleteContents);
 });
 
-function deleteContents() {}
+function deleteContents() {
+  document.body.textContent = "";
+  document.body.style.backgroundImage = "none";
+  document.body.style.backgroundColor = "transparent";
 
-initialLoad();
+  loadMenu();
+}

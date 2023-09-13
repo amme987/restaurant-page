@@ -1,4 +1,7 @@
 const initialLoad = () => {
+  // document.body.style.backgroundImage = "url(../src/homepage.jpg)";
+  // document.body.style.backgroundColor = "black";
+
   const content = document.getElementById("content");
 
   const main = document.createElement("main");
