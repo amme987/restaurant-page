@@ -7,7 +7,6 @@
 
 html {
   font-family: monospace;
-
   font-size: 20px;
 }
 
@@ -21,17 +20,23 @@ body {
   color: white;
 }
 
-nav {
+ul {
   display: flex;
+  align-items: baseline;
+  padding: 0;
   margin-bottom: 3rem;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  align-items: baseline;
-  gap: 15px;
+  gap: 2rem;
 }
 
-a:first-child {
-  font-family: "Noto Sans KR", sans-serif;
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+li:first-child {
   font-size: 2rem;
 }
 
@@ -43,12 +48,11 @@ main {
 
 aside {
   grid-column: 2;
-  margin-bottom: 1rem;
   font-style: italic;
   font-size: 1.5rem;
 }
 
 p {
   grid-column: 2;
-  margin: 0;
+  margin-bottom: 0;
 }
