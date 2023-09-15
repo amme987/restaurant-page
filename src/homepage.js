@@ -2,6 +2,7 @@ const homepage = () => {
   const content = document.getElementById("content");
   const main = document.createElement("main");
   content.appendChild(main);
+
   const h2 = document.createElement("h2");
   main.appendChild(h2).textContent = "Fast, fresh, and forkable";
   const p = document.createElement("p");

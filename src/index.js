@@ -7,9 +7,9 @@ import contact from "./contact";
 (function () {
   const nav = document.createElement("nav");
   document.body.prepend(nav);
-
   const ul = document.createElement("ul");
   nav.appendChild(ul);
+
   const homepage = document.createElement("li");
   homepage.setAttribute("id", "home");
   ul.appendChild(homepage).textContent = "The Hungry Fork";
@@ -21,7 +21,7 @@ import contact from "./contact";
   ul.appendChild(contact).textContent = "Contact";
 })();
 
-homepage();
+contact();
 
 // Add event listeners to navigation elements
 document.querySelectorAll("li").forEach(li => {
