@@ -1,40 +1,43 @@
 import "./style.css";
-import initialLoad from "./homepage";
-import loadMenu from "./menu";
+import homepage from "./homepage";
+import menu from "./menu";
+import contact from "./contact";
 
-const displayTabs = (() => {
+// Show tab options
+(function () {
   const nav = document.createElement("nav");
-  content.appendChild(nav);
+  document.body.prepend(nav);
 
   const ul = document.createElement("ul");
   nav.appendChild(ul);
   const homepage = document.createElement("li");
+  homepage.setAttribute("id", "home");
   ul.appendChild(homepage).textContent = "The Hungry Fork";
   const menu = document.createElement("li");
+  menu.setAttribute("id", "menu");
   ul.appendChild(menu).textContent = "Menu";
   const contact = document.createElement("li");
+  contact.setAttribute("id", "contact");
   ul.appendChild(contact).textContent = "Contact";
-
-  // const homepage = document.createElement("a");
-  // nav.appendChild(homepage).textContent = "The Hungry Fork";
-  // const menu = document.createElement("a");
-  // nav.appendChild(menu).textContent = "Menu";
-  // menu.setAttribute("href", "");
-  // const contact = document.createElement("a");
-  // nav.appendChild(contact).textContent = "Contact";
 })();
 
-initialLoad();
+homepage();
 
-// Event listeners to navigation elements
-document.querySelectorAll("li").forEach(item => {
-  item.addEventListener("click", deleteContents);
+// Add event listeners to navigation elements
+document.querySelectorAll("li").forEach(li => {
+  li.addEventListener("click", e => {
+    deleteContents();
+    if (e.target.id === "home") {
+      return homepage();
+    } else if (e.target.id === "menu") {
+      return menu();
+    } else {
+      return contact();
+    }
+  });
 });
 
 function deleteContents() {
-  document.body.textContent = "";
-  document.body.style.backgroundImage = "none";
-  document.body.style.backgroundColor = "transparent";
-
-  loadMenu();
+  const content = document.getElementById("content");
+  content.textContent = "";
 }

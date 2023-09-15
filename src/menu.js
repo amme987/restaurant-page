@@ -1,6 +1,8 @@
-const loadMenu = () => {
+const menu = () => {
+  const content = document.getElementById("content");
+
   const test = document.createElement("div");
-  document.body.appendChild(test).textContent = "it worked";
+  content.appendChild(test).textContent = "menu";
 };
 
-export default loadMenu;
+export default menu;
