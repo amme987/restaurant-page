@@ -28,6 +28,7 @@ document.querySelectorAll("li").forEach(li => {
   li.addEventListener("click", e => {
     deleteContents();
     if (e.target.id === "home") {
+      console.log(e);
       return homepage();
     } else if (e.target.id === "menu") {
       return menu();

@@ -4,6 +4,8 @@ const homepage = () => {
   content.appendChild(main);
 
   const h2 = document.createElement("h2");
+  h2.style.fontStyle = "italic";
+  h2.style.fontWeight = "normal";
   main.appendChild(h2).textContent = "Fast, fresh, and forkable";
   const p = document.createElement("p");
   main.appendChild(p).textContent =
