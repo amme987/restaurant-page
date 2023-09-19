@@ -1,7 +1,7 @@
 import "./style.css";
 import homepage from "./homepage";
-import menu from "./menu";
-import contact from "./contact";
+import { foodItems } from "./menu";
+import pageTemplate, { contactInfo } from "./contact";
 
 // Show tab options
 (function () {
@@ -21,7 +21,7 @@ import contact from "./contact";
   ul.appendChild(contact).textContent = "Contact";
 })();
 
-contact();
+homepage();
 
 // Add event listeners to navigation elements
 document.querySelectorAll("li").forEach(li => {
@@ -31,9 +31,9 @@ document.querySelectorAll("li").forEach(li => {
       console.log(e);
       return homepage();
     } else if (e.target.id === "menu") {
-      return menu();
+      return pageTemplate(foodItems);
     } else {
-      return contact();
+      return pageTemplate(contactInfo);
     }
   });
 });
